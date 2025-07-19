@@ -14,11 +14,11 @@ const CataloguePage: React.FC = () => {
     '/marshall-tester.webp',
     '/umilkf2d.3fl.jpg',
     '/WhatsApp Image 2025-07-11 at 15.34.52_d992e664.jpg',
-    '/tunnel-2316267_640.jpg',
-    '/sand-1232366_640.jpg',
-    '/pexels-life-of-pix-2469.jpg',
-    '/road-166543_640.jpg',
-    '/pexels-johnnymckane-237950.jpg',
+    '/machines/hnc1.png',
+        '/machines/hnc2.png',
+        '/machines/hnc3.png',
+        '/machines/hnc4.png',
+        '/machines/hnc5.png',
     '/pexels-hilmiisilak-32121261.jpg',
     '/industry-319580_1280.jpg'
   ];
