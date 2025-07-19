@@ -8,9 +8,10 @@ const CataloguePage: React.FC = () => {
 
   const catalogueImages = [
     '/semi auto comp testing.jpg',
-    '/Amt Comp testing.jpg',
-    '/Direct shear.jpg',
-    '/core drilling.jpg',
+    '/IMG-20250703-WA0072-removebg-preview.png',
+        '/machines/soil1.png',
+        '/machines/soil2.png',
+        '/machines/soil3.png',
     '/marshall-tester.webp',
     '/umilkf2d.3fl.jpg',
     '/WhatsApp Image 2025-07-11 at 15.34.52_d992e664.jpg',
