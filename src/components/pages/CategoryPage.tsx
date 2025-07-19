@@ -101,9 +101,9 @@ const CategoryPage: React.FC = () => {
       images: [
         '/marshall-tester.webp',
         '/machines/but1.png',
-        '/pexels-life-of-pix-2469.jpg',
-        '/tunnel-2316267_640.jpg',
-        '/industry-319580_1280.jpg'
+        '/machines/but2.png',
+        '/machines/but3.png',
+        '/machines/but4.png'
       ],
       products: [
         'Penetration Test Apparatus - Digital timer control with needle assembly',
