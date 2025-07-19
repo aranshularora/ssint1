@@ -74,7 +74,7 @@ const CategoryPage: React.FC = () => {
         '/machines/test siv.png',
         '/machines/conc test 1.png',
         '/machines/conc mixer.png',
-        '/industry-319580_1280.jpg',
+        '/machines/Buoyancy Balance.png',
         '/pexels-pixabay-7931.jpg'
       ],
       products: [
