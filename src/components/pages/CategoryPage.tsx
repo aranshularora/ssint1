@@ -18,7 +18,7 @@ const CategoryPage: React.FC = () => {
         '/umilkf2d.3fl.jpg',
         '/machines/B Mold.png',
         '/machines/Picture1.jpg',
-        '/machines/Picture2.jpg',
+        '/machines/Picture2.png',
         '/machines/Picture3.png'
       ],
       products: [
