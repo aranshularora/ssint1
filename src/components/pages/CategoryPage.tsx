@@ -159,10 +159,11 @@ const CategoryPage: React.FC = () => {
       title: 'Heating and Cooling Equipment',
       description: 'Temperature control equipment for various testing applications and sample preparation.',
       images: [
-        '/pexels-hilmiisilak-32121261.jpg',
-        '/industry-319580_1280.jpg',
-        '/tunnel-2316267_640.jpg',
-        '/pexels-life-of-pix-2469.jpg'
+        '/machines/hnc1.png',
+        '/machines/hnc2.png',
+        '/machines/hnc3.png',
+        '/machines/hnc4.png',
+        '/machines/hnc5.png'
       ],
       products: [
         'Hot Air Oven - 50L to 500L capacity, up to 300°C temperature range',
