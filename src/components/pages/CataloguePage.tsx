@@ -19,8 +19,12 @@ const CataloguePage: React.FC = () => {
         '/machines/hnc3.png',
         '/machines/hnc4.png',
         '/machines/hnc5.png',
-    '/pexels-hilmiisilak-32121261.jpg',
-    '/industry-319580_1280.jpg'
+    '/machines/agg1.png',
+        '/machines/agg2.png',
+        '/machines/agg3.png',
+        '/machines/agg4.png',
+        '/machines/agg5.png',
+        '/machines/agg6.png'
   ];
 
   const products = [
