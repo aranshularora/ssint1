@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
     {
       id: 'automatic-ctm',
       name: 'Automatic Compression Testing Machine',
-      image: '/semi auto comp testing.jpg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: '/automatic comp.png?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       description: 'High-precision automatic CTM with digital controls and data logging capabilities.',
       capacity: 'Up to 7000kN'
     },
