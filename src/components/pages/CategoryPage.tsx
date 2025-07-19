@@ -72,7 +72,7 @@ const CategoryPage: React.FC = () => {
       description: 'Advanced concrete testing solutions for quality control and compliance testing.',
       images: [
         '/core drilling.jpg',
-        '/pexels-life-of-pix-2469.jpg',
+        '/machines/conc test 1.png',
         '/tunnel-2316267_640.jpg',
         '/industry-319580_1280.jpg',
         '/pexels-pixabay-7931.jpg'
