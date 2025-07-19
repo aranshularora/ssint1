@@ -71,7 +71,7 @@ const CategoryPage: React.FC = () => {
       title: 'Concrete Testing Equipment',
       description: 'Advanced concrete testing solutions for quality control and compliance testing.',
       images: [
-        '/core drilling.jpg',
+        '/machines/test siv.png',
         '/machines/conc test 1.png',
         '/machines/conc mixer.png',
         '/industry-319580_1280.jpg',
