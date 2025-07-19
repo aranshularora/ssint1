@@ -73,7 +73,7 @@ const CategoryPage: React.FC = () => {
       images: [
         '/core drilling.jpg',
         '/machines/conc test 1.png',
-        '/tunnel-2316267_640.jpg',
+        '/machines/conc mixer.png',
         '/industry-319580_1280.jpg',
         '/pexels-pixabay-7931.jpg'
       ],
