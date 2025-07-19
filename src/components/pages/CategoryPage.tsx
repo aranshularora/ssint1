@@ -17,7 +17,7 @@ const CategoryPage: React.FC = () => {
         '/machines/VB_table-removebg-preview.png',
         '/umilkf2d.3fl.jpg',
         '/machines/B Mold.png',
-        '/machines/Picture1.jpg,
+        '/machines/Picture1.jpg',
         '/machines/Picture2.jpg',
         '/machines/Picture3.png'
       ],
