@@ -1,232 +1,179 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Settings, Award } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Settings, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 import Button from '../ui/Button';
 
 const CategoryPage: React.FC = () => {
   const { category } = useParams<{ category: string }>();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const categoryData: { [key: string]: any } = {
     'cement-testing-equipment': {
       title: 'Cement Testing Equipment',
       description: 'Complete range of cement testing instruments for quality control and compliance testing.',
-      image: '/tunnel-2316267_640.jpg',
+      images: [
+        '/Amt Comp testing.jpg',
+        '/semi auto comp testing.jpg',
+        '/tunnel-2316267_640.jpg',
+        '/umilkf2d.3fl.jpg',
+        '/pexels-johnnymckane-237950.jpg',
+        '/pexels-pixabay-7931.jpg'
+      ],
       products: [
-        {
-          name: 'Compression Testing Machine (CTM)',
-          capacity: 'up to 7000kN',
-          description: 'High-precision testing machine for compressive strength testing of cement cubes and concrete specimens.',
-          image: '/Amt Comp testing.jpg'
-        },
-        {
-          name: 'Vibrating Machine',
-          capacity: 'Variable frequency',
-          description: 'Essential for proper compaction of cement and concrete specimens during testing.',
-          image: '/umilkf2d.3fl.jpg'
-        },
-        {
-          name: 'Vibrating Table',
-          capacity: 'Heavy duty motor',
-          description: 'Used for compacting concrete specimens and removing air bubbles from test samples.',
-          image: '/umilkf2d.3fl.jpg'
-        },
-        {
-          name: 'Cube Moulds',
-          capacity: '100mm to 200mm',
-          description: 'Precision-engineered moulds for preparing concrete test cubes.',
-          image: '/pexels-johnnymckane-237950.jpg'
-        },
-        {
-          name: 'Beam Moulds',
-          capacity: '100mm to 150mm',
-          description: 'High-quality moulds for casting concrete beams for flexural strength testing.',
-          image: '/pexels-pixabay-7931.jpg'
-        } 
- ]
+        'Automatic Compression Testing Machine (CTM) - Up to 7000kN capacity',
+        'Semi-Automatic Compression Testing Machine - Up to 5000kN capacity',
+        'Digital Compression Testing Machine - Up to 3000kN capacity',
+        'Vibrating Machine - Variable frequency control for proper compaction',
+        'Vibrating Table - Heavy duty motor for concrete specimen preparation',
+        'Cube Moulds - 100mm, 150mm, 200mm sizes available',
+        'Beam Moulds - 100x100x500mm, 150x150x700mm specifications',
+        'Cylinder Moulds - 150x300mm, 100x200mm standard sizes',
+        'Mortar Mixer - 5L capacity with variable speed control',
+        'Flow Table - Standard specifications for consistency testing',
+        'Cement Fineness Apparatus - Blaine air permeability method',
+        'Le Chatelier Apparatus - For soundness testing of cement',
+        'Vicat Apparatus - Initial and final setting time determination',
+        'Autoclave - For expansion testing of cement',
+        'Ball Bearing Apparatus - For ball bearing test on cement'
+      ]
     },
     'soil-testing-equipment': {
       title: 'Soil Testing Equipment',
       description: 'Comprehensive soil analysis and testing equipment for construction and geotechnical applications.',
-      image: '/sand-1232366_640.jpg',
+      images: [
+        '/Direct shear.jpg',
+        '/sand-1232366_640.jpg',
+        '/pexels-johnnymckane-237950.jpg',
+        '/industry-319580_1280.jpg',
+        '/pexels-life-of-pix-2469.jpg'
+      ],
       products: [
-        {
-          name: 'Standard Proctor Test Apparatus',
-          capacity: '1000ml & 2250ml',
-          description: 'Determines the relationship between moisture content and dry density of soils.',
-          image: '/sand-1232366_640.jpg'
-        },
-        {
-          name: 'Modified Proctor Test Apparatus',
-          capacity: '1000ml & 2250ml',
-          description: 'Heavy compaction test for determining maximum dry density and optimum moisture content.',
-          image: '/sand-1232366_640.jpg'
-        },
-        {
-          name: 'CBR Test Apparatus',
-          capacity: 'Standard loading',
-          description: 'California Bearing Ratio test equipment for evaluating subgrade strength.',
-          image: '/pexels-johnnymckane-237950.jpg'
-        },
-        {
-          name: 'Liquid Limit Device',
-          capacity: 'Casagrande method',
-          description: 'Casagrande apparatus for determining liquid limit of fine-grained soils.',
-          image: '/industry-319580_1280.jpg'
-        },
-        {
-          name: 'Direct Shear Test Apparatus',
-          capacity: 'Variable load',
-          description: 'Measures shear strength parameters of soil samples.',
-          image: '/pexels-life-of-pix-2469.jpg'
-        }
+        'Standard Proctor Test Apparatus - 1000ml & 2250ml mould capacity',
+        'Modified Proctor Test Apparatus - 1000ml & 2250ml heavy compaction',
+        'CBR Test Apparatus - California Bearing Ratio complete setup',
+        'Direct Shear Test Apparatus - Variable load capacity with proving ring',
+        'Triaxial Shear Test Apparatus - Advanced model with pressure control',
+        'Liquid Limit Device - Casagrande method with grooving tool',
+        'Plastic Limit Set - Complete accessories for plasticity index',
+        'Shrinkage Limit Test Set - Standard specifications with mercury',
+        'Consolidation Test Apparatus - Oedometer type with loading frame',
+        'Permeability Test Apparatus - Constant & falling head methods',
+        'Field Density Test Kit - Sand replacement method equipment',
+        'Core Cutter Method Apparatus - For field density determination',
+        'Hydrometer Analysis Set - For particle size distribution',
+        'Specific Gravity Test Set - Pycnometer method for soil solids',
+        'Unconfined Compression Test Apparatus - For cohesive soil strength'
       ]
     },
     'concrete-testing-equipment': {
       title: 'Concrete Testing Equipment',
       description: 'Advanced concrete testing solutions for quality control and compliance testing.',
-      image: '/pexels-life-of-pix-2469.jpg',
+      images: [
+        '/core drilling.jpg',
+        '/pexels-life-of-pix-2469.jpg',
+        '/tunnel-2316267_640.jpg',
+        '/industry-319580_1280.jpg',
+        '/pexels-pixabay-7931.jpg'
+      ],
       products: [
-        {
-          name: 'Concrete Slump Test Apparatus',
-          capacity: 'Standard cone',
-          description: 'Measures workability and consistency of fresh concrete.',
-          image: '/pexels-life-of-pix-2469.jpg'
-        },
-        {
-          name: 'Concrete Core Cutting Machine',
-          capacity: '50mm to 200mm',
-          description: 'Precision cutting of concrete cores for strength testing.',
-          image: '/tunnel-2316267_640.jpg'
-        },
-        {
-          name: 'Schmidt Rebound Hammer',
-          capacity: 'Digital display',
-          description: 'Non-destructive testing for concrete compressive strength estimation.',
-          image: '/industry-319580_1280.jpg'
-        },
-        {
-          name: 'Air Entrainment Meter',
-          capacity: '0.2 cubic feet',
-          description: 'Measures air content in fresh concrete by pressure method.',
-          image: '/pexels-life-of-pix-2469.jpg'
-        },
-        {
-          name: 'Flexural Testing Machine',
-          capacity: 'up to 100kN',
-          description: 'Tests flexural strength of concrete beams and prisms.',
-          image: '/tunnel-2316267_640.jpg'
-        }
+        'Concrete Slump Test Apparatus - Standard cone with base plate',
+        'Concrete Core Cutting Machine - 50mm to 200mm diameter capacity',
+        'Schmidt Rebound Hammer - Digital display with calibration anvil',
+        'Air Entrainment Meter - 0.2 cubic feet capacity pressure method',
+        'Flexural Testing Machine - Up to 100kN capacity for beam testing',
+        'Concrete Mixer - 40L, 60L, 100L capacity with tilting mechanism',
+        'Needle Penetrometer - For setting time determination',
+        'Concrete Test Hammer - Non-destructive testing equipment',
+        'Ultrasonic Pulse Velocity Tester - Digital model with transducers',
+        'Concrete Carbonation Test Kit - Complete set with indicators',
+        'Compressive Strength Test Cubes - 100mm, 150mm, 200mm sizes',
+        'Concrete Beam Moulds - For flexural strength testing',
+        'Concrete Cylinder Moulds - Standard sizes with base plates',
+        'Concrete Density Meter - For fresh concrete density measurement',
+        'Concrete Temperature Meter - Digital thermometer for concrete'
       ]
     },
     'bitumen-testing-equipment': {
       title: 'Bitumen Testing Equipment',
       description: 'Specialized equipment for asphalt and bitumen quality testing and analysis.',
-      image: '/road-166543_640.jpg',
+      images: [
+        '/marshall-tester.webp',
+        '/road-166543_640.jpg',
+        '/pexels-life-of-pix-2469.jpg',
+        '/tunnel-2316267_640.jpg',
+        '/industry-319580_1280.jpg'
+      ],
       products: [
-        {
-          name: 'Penetration Test Apparatus',
-          capacity: 'Digital timer',
-          description: 'Measures consistency of bituminous materials by penetration test.',
-          image: '/road-166543_640.jpg'
-        },
-        {
-          name: 'Softening Point Apparatus',
-          capacity: 'Ring & Ball method',
-          description: 'Determines softening point of bitumen by Ring and Ball method.',
-          image: '/road-166543_640.jpg'
-        },
-        {
-          name: 'Ductility Testing Machine',
-          capacity: 'Constant speed',
-          description: 'Measures ductility of bituminous materials at specified temperature.',
-          image: '/pexels-life-of-pix-2469.jpg'
-        },
-        {
-          name: 'Flash Point Apparatus',
-          capacity: 'Cleveland cup',
-          description: 'Determines flash point and fire point of bituminous materials.',
-          image: '/road-166543_640.jpg'
-        },
-        {
-          name: 'Marshall Stability Test Apparatus',
-          capacity: 'Complete setup',
-          description: 'Complete setup for Marshall stability and flow test of bituminous mixes.',
-          image: '/tunnel-2316267_640.jpg'
-        }
+        'Penetration Test Apparatus - Digital timer control with needle assembly',
+        'Softening Point Apparatus - Ring & Ball method with heating bath',
+        'Ductility Testing Machine - Constant speed motor with water bath',
+        'Flash Point Apparatus - Cleveland open cup method',
+        'Marshall Stability Test Apparatus - Complete setup with loading frame',
+        'Bitumen Extractor - Centrifuge type for aggregate extraction',
+        'Viscosity Test Apparatus - Saybolt viscometer with heating system',
+        'Specific Gravity Test Set - Pycnometer method for bitumen',
+        'Solubility Test Apparatus - Standard specifications with solvents',
+        'Thin Film Oven Test - Rolling thin film oven for aging',
+        'Spot Test Apparatus - For bitumen quality assessment',
+        'Float Test Apparatus - For consistency measurement',
+        'Fraass Breaking Point Apparatus - For low temperature properties',
+        'Elastic Recovery Test Apparatus - For modified bitumen testing',
+        'Brookfield Viscometer - For viscosity measurement at various temperatures'
       ]
     },
     'aggregate-testing-equipment': {
       title: 'Aggregate Testing Equipment',
       description: 'Testing equipment for aggregate materials used in construction and road building.',
-      image: '/pexels-johnnymckane-237950.jpg',
+      images: [
+        '/pexels-johnnymckane-237950.jpg',
+        '/tunnel-2316267_640.jpg',
+        '/industry-319580_1280.jpg',
+        '/sand-1232366_640.jpg',
+        '/pexels-life-of-pix-2469.jpg'
+      ],
       products: [
-        {
-          name: 'Sieve Analysis Set',
-          capacity: '4.75mm to 75μm',
-          description: 'Complete set of sieves for particle size distribution analysis.',
-          image: '/pexels-johnnymckane-237950.jpg'
-        },
-        {
-          name: 'Aggregate Impact Testing Machine',
-          capacity: 'Standard hammer',
-          description: 'Determines impact value of aggregates for road construction.',
-          image: '/tunnel-2316267_640.jpg'
-        },
-        {
-          name: 'Los Angeles Abrasion Testing Machine',
-          capacity: 'Rotating drum',
-          description: 'Measures resistance to abrasion and degradation of aggregates.',
-          image: '/industry-319580_1280.jpg'
-        },
-        {
-          name: 'Aggregate Crushing Value Apparatus',
-          capacity: 'Cylindrical mould',
-          description: 'Determines crushing strength of aggregates.',
-          image: '/pexels-johnnymckane-237950.jpg'
-        },
-        {
-          name: 'Specific Gravity Test Set',
-          capacity: 'Complete set',
-          description: 'Determines specific gravity and water absorption of aggregates.',
-          image: '/sand-1232366_640.jpg'
-        }
+        'Sieve Analysis Set - 4.75mm to 75μm complete set with shaker',
+        'Aggregate Impact Testing Machine - Standard hammer with anvil',
+        'Los Angeles Abrasion Testing Machine - Rotating drum with steel balls',
+        'Aggregate Crushing Value Apparatus - Cylindrical mould with plunger',
+        'Ten Percent Fines Value Apparatus - Complete setup with sieves',
+        'Specific Gravity Test Set - Complete accessories for coarse aggregates',
+        'Water Absorption Test Set - Standard method for aggregate porosity',
+        'Flakiness & Elongation Index Apparatus - Gauge set for shape determination',
+        'Soundness Test Apparatus - Sodium/Magnesium sulfate method',
+        'Aggregate Polishing Test Machine - British wheel method',
+        'Sand Equivalent Test Apparatus - For clay content determination',
+        'Aggregate Abrasion Value Test - Dorry abrasion testing machine',
+        'Stripping Value Test Apparatus - For adhesion of bitumen to aggregates',
+        'Angularity Number Test Set - For fine aggregate angularity',
+        'Bulk Density Test Apparatus - For loose and compacted density'
       ]
     },
     'heating-and-cooling-equipment': {
       title: 'Heating and Cooling Equipment',
       description: 'Temperature control equipment for various testing applications and sample preparation.',
-      image: '/pexels-hilmiisilak-32121261.jpg',
+      images: [
+        '/pexels-hilmiisilak-32121261.jpg',
+        '/industry-319580_1280.jpg',
+        '/tunnel-2316267_640.jpg',
+        '/pexels-life-of-pix-2469.jpg'
+      ],
       products: [
-        {
-          name: 'Hot Air Oven',
-          capacity: '50L to 500L',
-          description: 'Precision temperature control for drying and heating applications.',
-          image: '/pexels-hilmiisilak-32121261.jpg'
-        },
-        {
-          name: 'Water Bath',
-          capacity: '5L to 50L',
-          description: 'Constant temperature water bath for various testing procedures.',
-          image: '/pexels-hilmiisilak-32121261.jpg'
-        },
-        {
-          name: 'Muffle Furnace',
-          capacity: 'up to 1200°C',
-          description: 'High-temperature furnace for ash content and ignition loss tests.',
-          image: '/pexels-hilmiisilak-32121261.jpg'
-        },
-        {
-          name: 'Heating Mantle',
-          capacity: '100ml to 5000ml',
-          description: 'Controlled heating for round bottom flasks and beakers.',
-          image: '/pexels-hilmiisilak-32121261.jpg'
-        },
-        {
-          name: 'Refrigerated Incubator',
-          capacity: '-10°C to +60°C',
-          description: 'Precise temperature control for sample conditioning and storage.',
-          image: '/pexels-hilmiisilak-32121261.jpg'
-        }
+        'Hot Air Oven - 50L to 500L capacity, up to 300°C temperature range',
+        'Water Bath - 5L to 50L capacity with digital temperature control',
+        'Muffle Furnace - Up to 1200°C, programmable temperature controller',
+        'Heating Mantle - 100ml to 5000ml capacity with variable heat control',
+        'Refrigerated Incubator - -10°C to +60°C range with humidity control',
+        'Drying Oven - Forced air circulation with uniform temperature',
+        'Cooling Bath - Refrigerated circulator with temperature stability',
+        'Temperature Controller - Digital PID control with alarm functions',
+        'Thermostatic Water Bath - Precision control ±0.1°C accuracy',
+        'Laboratory Freezer - -20°C to -80°C range for sample storage',
+        'Heating Plate - Digital control with ceramic top surface',
+        'Oil Bath - High temperature heating with thermal oil',
+        'Paraffin Wax Bath - For embedding and sectioning applications',
+        'Constant Temperature Room - Walk-in chambers for large specimens',
+        'Environmental Chamber - Combined temperature and humidity control'
       ]
     }
   };
@@ -246,88 +193,159 @@ const CategoryPage: React.FC = () => {
     );
   }
 
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % currentCategory.images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + currentCategory.images.length) % currentCategory.images.length);
+  };
+
   return (
     <div>
-      {/* Hero Section */}
-      <section 
-        className="relative bg-gray-900 text-white py-20"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("${currentCategory.image}")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      {/* Breadcrumb */}
+      <section className="bg-gray-50 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center space-x-2 text-sm text-gray-600">
+            <Link to="/" className="hover:text-blue-600">Home</Link>
+            <span>/</span>
+            <Link to="/products" className="hover:text-blue-600">Products</Link>
+            <span>/</span>
+            <span className="text-gray-900">{currentCategory.title}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Header */}
+      <section className="py-12 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center mb-6">
             <Link 
               to="/products" 
-              className="flex items-center text-blue-300 hover:text-white transition-colors duration-200 mr-4"
+              className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200 mr-4"
             >
               <ArrowLeft className="h-5 w-5 mr-2" />
               Back to Products
             </Link>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">{currentCategory.title}</h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed">
-            {currentCategory.description}
-          </p>
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">{currentCategory.title}</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              {currentCategory.description}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Products List */}
-      <section className="py-20 bg-white">
+      {/* Main Content */}
+      <section className="py-12 bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Machines</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              All products manufactured according to IS, BS, and ASTM standards with quality assurance
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {currentCategory.products.map((product: any, index: number) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                {/* Product Image */}
-                <div className="aspect-w-16 aspect-h-12 overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Left Side - Photo Carousel */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Product Images</h2>
+              
+              {/* Main Image */}
+              <div className="relative mb-6">
+                <div className="aspect-w-16 aspect-h-12 bg-gray-100 rounded-xl overflow-hidden">
                   <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                    src={currentCategory.images[currentImageIndex]} 
+                    alt={`${currentCategory.title} ${currentImageIndex + 1}`}
+                    className="w-full h-96 object-cover"
                   />
                 </div>
                 
-                {/* Product Info */}
-                <div className="p-6">
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                    <div className="inline-flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mb-3">
-                      <Settings className="h-4 w-4 mr-2" />
-                      {product.capacity}
-                    </div>
-                    <p className="text-gray-600 leading-relaxed">{product.description}</p>
-                  </div>
+                {/* Navigation Arrows */}
+                {currentCategory.images.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevImage}
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+                    >
+                      <ChevronLeft className="h-6 w-6 text-gray-700" />
+                    </button>
+                    <button
+                      onClick={nextImage}
+                      className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-200"
+                    >
+                      <ChevronRight className="h-6 w-6 text-gray-700" />
+                    </button>
+                  </>
+                )}
+              </div>
 
-                  <div className="flex flex-col gap-3">
-                    <Link to="/contact" className="w-full">
-                      <Button className="w-full">
-                        Get Quote
-                      </Button>
-                    </Link>
-                    <Link to="/contact" className="w-full">
-                      <Button variant="outline" className="w-full">
-                        Technical Details
-                      </Button>
-                    </Link>
+              {/* Thumbnail Navigation */}
+              {currentCategory.images.length > 1 && (
+                <div className="grid grid-cols-6 gap-2">
+                  {currentCategory.images.map((image: string, index: number) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`aspect-square rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                        currentImageIndex === index 
+                          ? 'border-blue-500 ring-2 ring-blue-200' 
+                          : 'border-gray-200 hover:border-gray-300'
+                      }`}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`Thumbnail ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {/* Image Counter */}
+              {currentCategory.images.length > 1 && (
+                <div className="text-center mt-4">
+                  <span className="text-sm text-gray-500">
+                    {currentImageIndex + 1} of {currentCategory.images.length}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* Right Side - Product List */}
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Available Products</h2>
+              
+              <div className="space-y-3 max-h-96 overflow-y-auto pr-4">
+                {currentCategory.products.map((product: string, index: number) => (
+                  <div key={index} className="flex items-start py-2 border-b border-gray-100 last:border-b-0">
+                    <span className="text-blue-500 mr-3 mt-2 text-lg">•</span>
+                    <span className="text-gray-700 leading-relaxed">{product}</span>
                   </div>
+                ))}
+              </div>
+
+              {/* Contact CTA */}
+              <div className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-100">
+                <h4 className="font-semibold text-gray-900 mb-2">Need More Information?</h4>
+                <p className="text-gray-600 text-sm mb-4">
+                  Contact us for detailed specifications, pricing, or custom requirements for any of these products.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link to="/contact" className="flex-1">
+                    <Button size="sm" className="w-full">
+                      Get Quote
+                    </Button>
+                  </Link>
+                  <Link to="/contact" className="flex-1">
+                    <Button variant="outline" size="sm" className="w-full">
+                      Technical Details
+                    </Button>
+                  </Link>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Standards Compliance */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Quality Assurance</h2>
