@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
     {
       id: 'core-cutting-machine',
       name: 'Core Cutting & Grinding Machine',
-      image: '/core drilling.jpg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: '/drill core.png?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       description: 'Precision core cutting and grinding for concrete sample preparation.',
       capacity: 'Various Core Sizes'
     }
