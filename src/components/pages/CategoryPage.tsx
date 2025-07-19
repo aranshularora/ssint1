@@ -43,7 +43,7 @@ const CategoryPage: React.FC = () => {
       title: 'Soil Testing Equipment',
       description: 'Comprehensive soil analysis and testing equipment for construction and geotechnical applications.',
       images: [
-        '/Direct shear.jpg',
+        '/IMG-20250703-WA0072-removebg-preview.png',
         '/machines/soil1.png',
         '/machines/soil2.png',
         '/industry-319580_1280.jpg',
