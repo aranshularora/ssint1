@@ -47,7 +47,7 @@ const CategoryPage: React.FC = () => {
         '/machines/soil1.png',
         '/machines/soil2.png',
         '/machines/soil3.png',
-        '/pexels-life-of-pix-2469.jpg'
+        '/machines/soil4.png'
       ],
       products: [
         'Standard Proctor Test Apparatus - 1000ml & 2250ml mould capacity',
