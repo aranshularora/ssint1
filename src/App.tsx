@@ -9,6 +9,7 @@ import SupportPage from './components/pages/SupportPage';
 import ContactPage from './components/pages/ContactPage';
 import CategoryPage from './components/pages/CategoryPage';
 import ProductDetailPage from './components/pages/ProductDetailPage';
+import CataloguePage from './components/pages/CataloguePage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/products/:category" element={<CategoryPage />} />
           <Route path="/product/:productId" element={<ProductDetailPage />} />
+          <Route path="/catalogue" element={<CataloguePage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/contact" element={<ContactPage />} />

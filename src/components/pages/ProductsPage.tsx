@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wrench, TestTube, Building, Flame, Mountain, Thermometer } from 'lucide-react';
+import { ArrowRight, Wrench, TestTube, Building, Flame, Mountain, Thermometer, BookOpen } from 'lucide-react';
+import Button from '../ui/Button';
 
 const ProductsPage: React.FC = () => {
   const categories = [
@@ -130,6 +131,16 @@ const ProductsPage: React.FC = () => {
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <Link to="/catalogue">
+              <Button size="lg">
+                <BookOpen className="mr-2 h-5 w-5" />
+                View Complete Product Catalogue
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
