@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
     {
       id: 'bitumen-extractor',
       name: 'Direct Share Apparatus',
-      image: '/Direct shear.jpg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+      image: '/IMG-20250703-WA0072-removebg-preview.png?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       description: 'Direct Shear Apparatus for different type of soil Testing.',
       capacity: 'Multiple Soil Type'
     },
