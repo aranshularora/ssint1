@@ -15,28 +15,28 @@ const HomePage: React.FC = () => {
     {
       id: 'semi-automatic-ctm',
       name: 'Digital Compression Testing Machine',
-      image: '/Amt Comp testing.jpg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/Amt Comp testing.jpg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       description: 'Reliable semi-automatic CTM perfect for medium-scale testing operations.',
       capacity: 'Up to 5000kN'
     },
     {
       id: 'marshall-stability',
       name: 'Marshall Stability Test Apparatus',
-      image: '/marshall-tester.webp?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/marshall-tester.webp?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       description: 'Complete Marshall stability testing solution for asphalt mix design.',
       capacity: 'Standard Load Range'
     },
     {
       id: 'bitumen-extractor',
       name: 'Direct Share Apparatus',
-      image: '/Direct shear.jpg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/Direct shear.jpg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       description: 'Direct Shear Apparatus for different type of soil Testing.',
       capacity: 'Multiple Soil Type'
     },
     {
       id: 'core-cutting-machine',
       name: 'Core Cutting & Grinding Machine',
-      image: '/core drilling.jpg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+      image: '/core drilling.jpg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
       description: 'Precision core cutting and grinding for concrete sample preparation.',
       capacity: 'Various Core Sizes'
     }
