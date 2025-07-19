@@ -12,8 +12,8 @@ const CategoryPage: React.FC = () => {
       title: 'Cement Testing Equipment',
       description: 'Complete range of cement testing instruments for quality control and compliance testing.',
       images: [
-        '/Amt Comp testing.jpg',
-        '/semi auto comp testing.jpg',
+        '/automatic comp.png',
+        '/digital comp.png',
         '/tunnel-2316267_640.jpg',
         '/umilkf2d.3fl.jpg',
         '/pexels-pixabay-7931.jpg'
