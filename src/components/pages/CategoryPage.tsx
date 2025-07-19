@@ -16,7 +16,10 @@ const CategoryPage: React.FC = () => {
         '/digital comp.png',
         '/machines/VB_table-removebg-preview.png',
         '/umilkf2d.3fl.jpg',
-        '/machines/B Mold.png'
+        '/machines/B Mold.png',
+        '/machines/Picture1.jpg,
+        '/machines/Picture2.jpg',
+        '/machines/Picture3.png'
       ],
       products: [
         'Automatic Compression Testing Machine (CTM) - Up to 7000kN capacity',
