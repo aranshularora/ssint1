@@ -46,7 +46,7 @@ const CategoryPage: React.FC = () => {
         '/IMG-20250703-WA0072-removebg-preview.png',
         '/machines/soil1.png',
         '/machines/soil2.png',
-        '/industry-319580_1280.jpg',
+        '/machines/soil3.png',
         '/pexels-life-of-pix-2469.jpg'
       ],
       products: [
