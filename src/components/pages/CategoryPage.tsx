@@ -14,7 +14,7 @@ const CategoryPage: React.FC = () => {
       images: [
         '/automatic comp.png',
         '/digital comp.png',
-        '/tunnel-2316267_640.jpg',
+        '/VB_table-removebg-preview.png',
         '/umilkf2d.3fl.jpg',
         '/pexels-pixabay-7931.jpg'
       ],
