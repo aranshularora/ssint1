@@ -16,7 +16,6 @@ const CategoryPage: React.FC = () => {
         '/semi auto comp testing.jpg',
         '/tunnel-2316267_640.jpg',
         '/umilkf2d.3fl.jpg',
-        '/pexels-johnnymckane-237950.jpg',
         '/pexels-pixabay-7931.jpg'
       ],
       products: [
