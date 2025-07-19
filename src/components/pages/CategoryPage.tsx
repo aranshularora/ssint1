@@ -130,11 +130,12 @@ const CategoryPage: React.FC = () => {
       title: 'Aggregate Testing Equipment',
       description: 'Testing equipment for aggregate materials used in construction and road building.',
       images: [
-        '/machines/but1.png',
-        '/machines/but1.png',
-        '/machines/but1.png',
-        '/machines/but1.png',
-        '/machines/but1.png'
+        '/machines/agg1.png',
+        '/machines/agg2.png',
+        '/machines/agg3.png',
+        '/machines/agg4.png',
+        '/machines/agg5.png',
+        '/machines/agg6.png'
       ],
       products: [
         'Sieve Analysis Set - 4.75mm to 75μm complete set with shaker',
