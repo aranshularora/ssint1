@@ -75,7 +75,7 @@ const CategoryPage: React.FC = () => {
         '/machines/conc test 1.png',
         '/machines/conc mixer.png',
         '/machines/Buoyancy Balance.png',
-        '/pexels-pixabay-7931.jpg'
+        '/machines/Proctor Mould .png'
       ],
       products: [
         'Concrete Slump Test Apparatus - Standard cone with base plate',
