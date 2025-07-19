@@ -103,7 +103,10 @@ const CategoryPage: React.FC = () => {
         '/machines/but1.png',
         '/machines/but2.png',
         '/machines/but3.png',
-        '/machines/but4.png'
+        '/machines/but4.png',
+        '/machines/but5.png',
+        '/machines/but6.png',
+  '/machines/but7.png'
       ],
       products: [
         'Penetration Test Apparatus - Digital timer control with needle assembly',
