@@ -100,7 +100,7 @@ const CategoryPage: React.FC = () => {
       description: 'Specialized equipment for asphalt and bitumen quality testing and analysis.',
       images: [
         '/marshall-tester.webp',
-        '/road-166543_640.jpg',
+        '/machines/but1.png',
         '/pexels-life-of-pix-2469.jpg',
         '/tunnel-2316267_640.jpg',
         '/industry-319580_1280.jpg'
